@@ -1,15 +1,3 @@
-[submodule ".submodules/TinyDb"]
-	path = .submodules/TinyDb
-	url = https://github.com/tylermenezes/TinyDb.git
-[submodule ".submodules/CuteControllers"]
-	path = .submodules/CuteControllers
-	url = https://github.com/tylermenezes/CuteControllers.git
-[submodule ".submodules/SplClassLoader.git"]
-	path = .submodules/SplClassLoader.git
-	url = https://gist.github.com/221634.git
-[submodule ".submodules/Twig"]
-	path = .submodules/Twig
-	url = https://github.com/fabpot/Twig
 [submodule "submodules/CuteControllers"]
 	path = submodules/CuteControllers
 	url = git@github.com:tylermenezes/CuteControllers.git
