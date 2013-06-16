@@ -16,3 +16,6 @@
 [submodule "submodules/TinyDb"]
 	path = submodules/TinyDb
 	url = git@github.com:tylermenezes/TinyDb.git
+[submodule "submodules/Twig"]
+	path = submodules/Twig
+	url = git@github.com:fabpot/Twig.git
