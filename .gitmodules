@@ -7,3 +7,6 @@
 [submodule "submodules/Twig"]
 	path = submodules/Twig
 	url = git@github.com:fabpot/Twig.git
+[submodule "submodules/ThinTasks"]
+	path = submodules/ThinTasks
+	url = git@github.com:tylermenezes/ThinTasks.git

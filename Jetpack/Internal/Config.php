@@ -1,6 +1,8 @@
 <?php
 
-namespace Jetpack;
+namespace Jetpack\Internal;
+
+require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'require.php');
 
 class Config
 {

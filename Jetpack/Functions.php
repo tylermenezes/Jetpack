@@ -30,6 +30,11 @@ function pathify()
     return substr($path, 1);
 }
 
+function is_windows()
+{
+    return strtoupper(substr(PHP_OS, 0, 3)) === 'WIN';
+}
+
 function app_dir()
 {
     if (is_cli()) {
