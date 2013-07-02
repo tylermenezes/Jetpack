@@ -208,7 +208,10 @@ abstract class App
                     $error_router->route($request);
                 } catch (\Exception $ex) {
                     error_log('Could not route to error route: '.static::$config->error_routes->$code);
+                    echo $err->getMessage();
                 }
+            } else {
+                echo $err->getMessage();
             }
         }
     }
