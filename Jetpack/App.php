@@ -30,6 +30,7 @@ abstract class App
 
         static::load_config();
         static::set_directories();
+        static::set_timezone();
         static::enable_debugging();
         static::spl_load();
         static::tinydb_connect();
@@ -89,6 +90,16 @@ abstract class App
 
         if (isset(static::$config->directories->tasks)) {
             static::$dir->tasks = pathify(app_dir(), static::$config->directories->tasks);
+        }
+    }
+
+    /**
+     * Sets the timezone
+     */
+    protected static function set_timezone()
+    {
+        if (static::$config->timezone) {
+            date_default_timezone_set(static::$config->timezone);
         }
     }
 
