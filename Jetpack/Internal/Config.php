@@ -10,10 +10,13 @@ class Config
 
     public function __construct($file)
     {
-        if (file_exists($file)) {
-            $this->config = json_decode(file_get_contents($file));
-        } else {
-            $this->config = array();
+        $this->config = (object)[];
+        foreach (func_get_args() as $file) {
+            if (file_exists($file)) {
+                foreach ((array)json_decode(file_get_contents($file)) as $k=>$v) {
+                    $this->config->$k = $v;
+                }
+            }
         }
     }
 

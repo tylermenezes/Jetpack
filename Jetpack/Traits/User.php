@@ -8,7 +8,7 @@ require_once(dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'Internal' . DIR
  * Stores the current object in the session, and throws 401 Forbidden errors if ::current() is accessed without a current model.
  *
  * @author      Tyler Menezes <tylermenezes@gmail.com>
- * @copyright   Copyright (c) Tyler Menezes. Released under the BSD license.
+ * @copyright   Copyright (c) Tyler Menezes. Released under the Perl Artistic License 2.0.
  *
  * @package Jetpack\Traits
  */

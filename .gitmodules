@@ -10,3 +10,6 @@
 [submodule "submodules/ThinTasks"]
 	path = submodules/ThinTasks
 	url = git@github.com:tylermenezes/ThinTasks.git
+[submodule "submodules/AutoAB"]
+	path = submodules/AutoAB
+	url = git@github.com:tylermenezes/AutoAB.git

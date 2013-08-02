@@ -8,7 +8,7 @@ require_once(dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'Internal' . DIR
  * Stores at most one of the model in the current session. Class must extend \TinyDb\Orm
  *
  * @author      Tyler Menezes <tylermenezes@gmail.com>
- * @copyright   Copyright (c) Tyler Menezes. Released under the BSD license.
+ * @copyright   Copyright (c) Tyler Menezes. Released under the Perl Artistic License 2.0.
  *
  * @package Jetpack\Traits
  */

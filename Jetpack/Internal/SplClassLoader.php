@@ -7,7 +7,7 @@ namespace Jetpack\Internal;
  * Requires classes automatically
  * 
  * @author      Tyler Menezes <tylermenezes@gmail.com>
- * @copyright   Copyright (c) Tyler Menezes. Released under the BSD license.
+ * @copyright   Copyright (c) Tyler Menezes. Released under the Perl Artistic License 2.0.
  *
  * @package Jetpack\Internal
  */

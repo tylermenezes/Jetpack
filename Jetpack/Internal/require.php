@@ -33,3 +33,7 @@ require_once(pathify($jetpack_submodule_dir, 'CuteControllers', 'CuteControllers
 require_once(pathify($jetpack_submodule_dir, 'ThinTasks', 'ThinTasks', 'Router.php'));
 require_once(pathify($jetpack_submodule_dir, 'Twig', 'lib', 'Twig', 'Autoloader.php'));
 \Twig_Autoloader::register();
+
+
+/* # Extensions */
+require_once(pathify($jetpack_submodule_dir, 'AutoAB', 'AutoAB', 'AB.php'));

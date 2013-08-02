@@ -9,7 +9,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Internal' . DIRECTORY_SE
  * Loads up all the components of the application
  *
  * @author      Tyler Menezes <tylermenezes@gmail.com>
- * @copyright   Copyright (c) Tyler Menezes. Released under the BSD license.
+ * @copyright   Copyright (c) Tyler Menezes. Released under the Perl Artistic License 2.0.
  *
  * @package Jetpack\Internal
  */
@@ -20,6 +20,7 @@ abstract class App
     public static $twig = null;
 
     const config_file_name = '.config.json';
+    const local_config_file_name = '.local.json';
 
     public static function before() {}
     public static function after() {}
@@ -53,6 +54,7 @@ abstract class App
     protected static function load_config()
     {
         $config_file = pathify(app_dir(), static::config_file_name);
+        $local_config_file = pathify(app_dir(), static::local_config_file_name);
 
         if (!file_exists($config_file)) {
             if (!is_cli()) {
@@ -61,7 +63,7 @@ abstract class App
             throw new \Exception("Config file doesn't exist. Create it at ".$config_file.". See the Jetpack docs for more info.");
         }
 
-        static::$config = new Internal\Config($config_file);
+        static::$config = new Internal\Config($config_file, $local_config_file);
     }
 
     /**
@@ -192,6 +194,7 @@ abstract class App
 
         // Load Twig
         static::$twig = new \Twig_Environment($template_dir_or_loader, $twig_config);
+        static::$twig->addExtension(new \AutoAB\AB());
 
         // Load the debugging extension if necessary
         if (isset(static::$config->debug) && static::$config->debug) {
