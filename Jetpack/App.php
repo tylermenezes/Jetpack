@@ -71,10 +71,6 @@ abstract class App
      */
     protected static function set_directories()
     {
-        if (!isset(static::$config->directories->controllers)) {
-            throw new \RuntimeException('Config file is missing setting for controllers directory.');
-        }
-
         if (isset(static::$config->directories->includes)) {
             $includes_dir = static::$config->directories->includes;
         } else {
