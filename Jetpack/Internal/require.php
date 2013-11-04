@@ -31,6 +31,7 @@ if (!file_exists(pathify($jetpack_submodule_dir, 'TinyDb', 'TinyDb', 'Db.php')))
 require_once(pathify($jetpack_submodule_dir, 'TinyDb', 'TinyDb', 'Db.php'));
 require_once(pathify($jetpack_submodule_dir, 'CuteControllers', 'CuteControllers', 'Router.php'));
 require_once(pathify($jetpack_submodule_dir, 'ThinTasks', 'ThinTasks', 'Router.php'));
+require_once(pathify($jetpack_submodule_dir, 'EasyEvents', 'EasyEvents', 'require.php'));
 require_once(pathify($jetpack_submodule_dir, 'Twig', 'lib', 'Twig', 'Autoloader.php'));
 \Twig_Autoloader::register();
 

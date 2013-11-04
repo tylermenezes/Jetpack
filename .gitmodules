@@ -13,3 +13,6 @@
 [submodule "submodules/AutoAB"]
 	path = submodules/AutoAB
 	url = git@github.com:tylermenezes/AutoAB.git
+[submodule "submodules/EasyEvents"]
+	path = submodules/EasyEvents
+	url = git@github.com:tylermenezes/EasyEvents.git

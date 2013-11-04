@@ -15,6 +15,8 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Internal' . DIRECTORY_SE
  */
 abstract class App
 {
+    use \EasyEvents\Eventable;
+
     public static $dir = null;
     public static $config = null;
     public static $twig = null;
@@ -31,6 +33,7 @@ abstract class App
 
         static::load_config();
         static::set_directories();
+        static::load_plugins();
         static::set_timezone();
         static::enable_debugging();
         static::spl_load();
@@ -88,6 +91,25 @@ abstract class App
 
         if (isset(static::$config->directories->tasks)) {
             static::$dir->tasks = pathify(app_dir(), static::$config->directories->tasks);
+        }
+
+        if (isset(static::$config->directories->plugins)) {
+            static::$dir->plugins = pathify(app_dir(), static::$config->directories->plugins);
+        }
+    }
+
+    /**
+     * Loads all plugins if a directory is configured
+     */
+    protected static function load_plugins()
+    {
+        if (isset(static::$config->directories->plugins)) {
+            $dirs = array_filter(glob(pathify(static::$dir->plugins, '*')), 'is_dir');
+            foreach ($dirs as $dir) {
+                if (file_exists(pathify($dir, 'index.php'))) {
+                    include_once(pathify($dir, 'index.php'));
+                }
+            }
         }
     }
 
