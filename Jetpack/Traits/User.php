@@ -86,7 +86,7 @@ trait User
      */
     public function get_password()
     {
-        throw new \TinyDb\AccessException('Password is hashed -- use check_password($password_to_check) instead.');
+        return $this->password;
     }
 
     /**
